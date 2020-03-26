@@ -1,0 +1,9 @@
+# /node_modules/* and /bower_components/* in the project root are ignored by default
+build/*.js
+src/assets
+src/vendor
+public
+dist
+scripts
+config
+prettier.config.js
