@@ -45,6 +45,8 @@
     "jest-environment-jsdom-fourteen": "1.0.1",
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
     "lint-staged": "^10.0.9",
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "^4.13.1",
@@ -76,7 +78,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": "eslint",
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "src/**/*.{js,jsx,ts,tsx,json,css,less,md}": [
       "prettier --write"
     ]
   },
@@ -123,12 +125,12 @@
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
+      "^.+\\.module\\.(css|sass|scss|less)$"
     ],
     "modulePaths": [],
     "moduleNameMapper": {
       "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+      "^.+\\.module\\.(css|sass|scss|less)$": "identity-obj-proxy"
     },
     "moduleFileExtensions": [
       "web.js",
@@ -157,7 +159,7 @@
         {
           "libraryName": "antd",
           "libraryDirectory": "es",
-          "style": "css"
+          "style": true
         }
       ]
     ]
