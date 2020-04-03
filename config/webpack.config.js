@@ -121,6 +121,8 @@ module.exports = function(webpackEnv) {
           loader: require.resolve(preProcessor),
           options: {
             sourceMap: true,
+            // for .bezierEasingMixin error
+            javascriptEnabled: preProcessor === 'less-loader'
           },
         }
       );
