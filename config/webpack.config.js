@@ -119,11 +119,11 @@ module.exports = function(webpackEnv) {
         },
         {
           loader: require.resolve(preProcessor),
-          options: {
-            sourceMap: true,
+          options: Object.assign(
+            {sourceMap: true},
             // for .bezierEasingMixin error
-            javascriptEnabled: preProcessor === 'less-loader'
-          },
+            preProcessor === 'less-loader' ? {javascriptEnabled: true} : {}
+          )
         }
       );
     }
