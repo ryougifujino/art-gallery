@@ -1,15 +1,11 @@
 import React from 'react';
-import { Layout } from 'antd';
 import './App.less';
-
-const { Header, Footer, Content } = Layout;
+import AppHeader from '../../components/AppHeader/AppHeader';
 
 const App: React.FunctionComponent = () => (
-  <Layout>
-    <Header>Header</Header>
-    <Content>Content</Content>
-    <Footer>Footer</Footer>
-  </Layout>
+  <div>
+    <AppHeader />
+  </div>
 );
 
 export default App;
