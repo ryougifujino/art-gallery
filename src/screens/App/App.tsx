@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.less';
+import styles from './App.module.less';
 import AppHeader from '../../components/AppHeader/AppHeader';
 import AppBody from '../../components/AppBody/AppBody';
 
 const App: React.FunctionComponent = () => (
-  <div>
+  <div className={styles.app}>
     <AppHeader />
     <AppBody />
   </div>
