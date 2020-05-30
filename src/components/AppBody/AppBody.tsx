@@ -4,7 +4,7 @@ import Photo from '../UI/Photo/Photo';
 
 const AppBody: React.FunctionComponent = () => (
   <div className={styles.body}>
-    {Array(10)
+    {Array(100)
       .fill(null)
       .map(() => (
         <Photo />
