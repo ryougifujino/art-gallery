@@ -1,7 +1,7 @@
 import { request } from '../util/fakeNetwork';
 import { getRandomInt } from '../util/random';
 
-interface Photo {
+export interface Photo {
   url: string;
 }
 
