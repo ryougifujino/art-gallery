@@ -1,5 +1,5 @@
 import { request } from '../util/fakeNetwork';
-import { getRandomInt } from '../util/random';
+import { shuffle } from '../util/random';
 
 export interface Photo {
   url: string;
@@ -9,8 +9,13 @@ export function getFeaturedPhotos(count = 10): Promise<Photo[]> {
   return new Promise((resolve) => {
     request(() => {
       const featuredPhotos: Photo[] = [];
+      const indexArray = shuffle(
+        Array(count)
+          .fill(null)
+          .map((value, index) => index)
+      );
       for (let i = 0; i < count; i++) {
-        featuredPhotos.push({ url: `/samples/${getRandomInt(1, 20)}.jpg` });
+        featuredPhotos.push({ url: `/samples/${indexArray[i]}.jpg` });
       }
       resolve(featuredPhotos);
     });
