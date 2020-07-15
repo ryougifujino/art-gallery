@@ -12,7 +12,7 @@ export function getFeaturedPhotos(count = 10): Promise<Photo[]> {
       const indexArray = shuffle(
         Array(count)
           .fill(null)
-          .map((value, index) => index)
+          .map((value, index) => index + 1)
       );
       for (let i = 0; i < count; i++) {
         featuredPhotos.push({ url: `/samples/${indexArray[i]}.jpg` });
